@@ -4,6 +4,7 @@ import Slider from './components/Slider'
 import ProductList from './components/ProductList'
 import About from './components/About'
 import {Routes, Route} from 'react-router-dom'
+import ProductDetails from './components/ProductDetails'
 function App() {
   return (
     <div className='App'>
@@ -11,10 +12,10 @@ function App() {
       <Routes>
         <Route path='/' element={<>
                                   <Slider/> 
-                                   <ProductList/>
-                                   </>
+                                   <ProductList/>                      </>
                                    }/>
         <Route path='About' element={<About/>}/>
+        <Route path='Product/:productId' element={<ProductDetails/>} />
       </Routes>
       
       
