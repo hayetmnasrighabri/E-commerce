@@ -6,15 +6,17 @@ function ProductDetails() {
    console.log(params)
   const productId = params.productId
   const [products, setProducts]=useState([])
+  const [categorie, setCategorie]=useState()
+
  useEffect(()=>{
   fetch(`https://fakestoreapi.com/products/${productId}`)
             .then(res=>res.json())
             .then((products)=>setProducts(products))
- },[])
+        },[])
   return (
-    <div>
+    <div className='Details'>
       <h1>Product Details {productId}</h1>
-       <Product product={products}/>
+       <Product product={products} showDetailsButton={false} />
     </div>
   )
 }
