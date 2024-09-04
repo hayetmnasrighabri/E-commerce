@@ -30,6 +30,9 @@ function ProductList() {
     <div>
       <h2 className="text-center">Listes des Produits</h2>
       <div className="container">
+      <button className='btn btn_info' onClick={()=>{getProducts()}}>
+          ALLProducts
+          </button>
         {categories.map((cat) => (
           <button className='btn btn_info' onClick={()=>handleProductCategories(cat)} key={cat}>
             {cat}
